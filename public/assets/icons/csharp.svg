@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <!-- C# Logo - Purple with # symbol -->
+  <defs>
+    <linearGradient id="csGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2391d3"/>
+      <stop offset="100%" style="stop-color:#1a7ac0"/>
+    </linearGradient>
+    <linearGradient id="csPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#68217a"/>
+      <stop offset="100%" style="stop-color:#511a5f"/>
+    </linearGradient>
+    <linearGradient id="csWhite" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff"/>
+      <stop offset="100%" style="stop-color:#f0f0f0"/>
+    </linearGradient>
+  </defs>
+  <!-- Rounded square background -->
+  <rect x="8" y="8" width="112" height="112" rx="16" fill="url(#csPurple)"/>
+  <!-- C# symbol -->
+  <text x="64" y="86" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="bold" fill="url(#csWhite)" text-anchor="middle" dominant-baseline="middle">C#</text>
+  <!-- Subtle geometric accent -->
+  <path d="M30 30 L98 30 L98 98 L30 98 Z" fill="none" stroke="url(#csGrad)" stroke-width="2" opacity="0.3" stroke-dasharray="8 4"/>
+</svg>

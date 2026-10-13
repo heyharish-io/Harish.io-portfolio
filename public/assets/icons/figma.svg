@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <!-- Figma Logo - Red/Purple multi-square -->
+  <defs>
+    <linearGradient id="figmaRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f24e1e"/>
+      <stop offset="100%" style="stop-color:#d83e1a"/>
+    </linearGradient>
+    <linearGradient id="figmaPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a259ff"/>
+      <stop offset="100%" style="stop-color:#8b45e8"/>
+    </linearGradient>
+    <linearGradient id="figmaBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#2563eb"/>
+    </linearGradient>
+    <linearGradient id="figmaGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4aa"/>
+      <stop offset="100%" style="stop-color:#00b894"/>
+    </linearGradient>
+    <linearGradient id="figmaYellow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffdc00"/>
+      <stop offset="100%" style="stop-color:#e6c400"/>
+    </linearGradient>
+  </defs>
+  <!-- Rounded square background -->
+  <rect x="8" y="8" width="112" height="112" rx="20" fill="#0d1117"/>
+  <!-- Four Figma squares -->
+  <rect x="22" y="22" width="40" height="40" rx="8" fill="url(#figmaRed)"/>
+  <rect x="66" y="22" width="40" height="40" rx="8" fill="url(#figmaPurple)"/>
+  <rect x="22" y="66" width="40" height="40" rx="8" fill="url(#figmaBlue)"/>
+  <rect x="66" y="66" width="40" height="40" rx="8" fill="url(#figmaGreen)"/>
+  <!-- Connection lines between squares -->
+  <path d="M62 42 L66 42 M42 62 L42 66" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.3"/>
+  <!-- Center diamond -->
+  <path d="M64 54 L58 64 L64 74 L70 64 Z" fill="url(#figmaYellow)"/>
+</svg>

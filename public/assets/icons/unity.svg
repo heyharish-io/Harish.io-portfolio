@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <!-- Unity 2023+ Logo - Official brand colors -->
+  <defs>
+    <linearGradient id="unityGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#000000"/>
+      <stop offset="100%" style="stop-color:#1a1a2e"/>
+    </linearGradient>
+  </defs>
+  <!-- Background cube -->
+  <path d="M64 8 L16 32 v64 l48 24 48-24 V32 L64 8 Z" fill="url(#unityGrad)" stroke="#3b82f6" stroke-width="2"/>
+  <!-- Inner faces -->
+  <path d="M64 8 L16 32 v64" fill="none" stroke="#3b82f6" stroke-width="1.5" opacity="0.6"/>
+  <path d="M64 8 L112 32 v64" fill="none" stroke="#60a5fa" stroke-width="1.5" opacity="0.6"/>
+  <path d="M16 32 v64 l48 24" fill="none" stroke="#3b82f6" stroke-width="1.5" opacity="0.4"/>
+  <!-- Unity spark -->
+  <circle cx="64" cy="56" r="18" fill="#3b82f6" opacity="0.2"/>
+  <path d="M64 44 L64 50 M58 56 L70 56 M59 51 L69 61 M59 61 L69 51" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

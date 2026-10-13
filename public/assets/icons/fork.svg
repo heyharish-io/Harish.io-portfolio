@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <!-- Fork Git Client Icon -->
+  <defs>
+    <linearGradient id="forkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#24292e"/>
+      <stop offset="100%" style="stop-color:#1a1e24"/>
+    </linearGradient>
+    <linearGradient id="forkAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f05032"/>
+      <stop offset="100%" style="stop-color:#e04022"/>
+    </linearGradient>
+  </defs>
+  <!-- Rounded square background -->
+  <rect x="8" y="8" width="112" height="112" rx="16" fill="url(#forkGrad)" stroke="url(#forkAccent)" stroke-width="2"/>
+  <!-- Fork symbol - two branches merging -->
+  <path d="M40 80 L64 56 L88 80" fill="none" stroke="url(#forkAccent)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M64 56 V24" fill="none" stroke="url(#forkAccent)" stroke-width="6" stroke-linecap="round"/>
+  <!-- Branch nodes -->
+  <circle cx="40" cy="80" r="8" fill="url(#forkAccent)"/>
+  <circle cx="88" cy="80" r="8" fill="url(#forkAccent)"/>
+  <circle cx="64" cy="24" r="8" fill="white"/>
+  <!-- Labels -->
+  <text x="40" y="100" font-family="Arial" font-size="10" font-weight="bold" fill="white" text-anchor="middle" font-size="8">feature</text>
+  <text x="88" y="100" font-family="Arial" font-size="10" font-weight="bold" fill="white" text-anchor="middle" font-size="8">main</text>
+  <text x="64" y="14" font-family="Arial" font-size="10" font-weight="bold" fill="#24292e" text-anchor="middle" font-size="8">merged</text>
+</svg>

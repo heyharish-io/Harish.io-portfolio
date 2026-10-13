@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <!-- Unity Addressables / Cloud Content Delivery - Cloud with sync arrows -->
+  <defs>
+    <linearGradient id="addrGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="addrBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0e1628"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="addrWhite" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff"/>
+      <stop offset="100%" style="stop-color:#e8eefc"/>
+    </linearGradient>
+  </defs>
+  <!-- Rounded square background -->
+  <rect x="8" y="8" width="112" height="112" rx="16" fill="url(#addrBg)" stroke="url(#addrGrad)" stroke-width="2"/>
+  <!-- Cloud shape -->
+  <path d="M64 100 C40 100 22 82 22 58 C22 38 38 22 58 22 C68 22 76 28 82 36 C90 28 98 36 98 48 C98 68 82 84 62 88 L62 88 C68 94 76 98 84 98 C96 98 106 88 106 74 C106 52 90 34 68 34 C50 34 36 46 36 62 C36 72 42 80 52 84 L52 84" fill="url(#addrWhite)" opacity="0.9"/>
+  <!-- Sync arrows -->
+  <path d="M64 50 L78 36 L70 36 L70 48 L58 48 L58 36 L50 36 Z" fill="url(#addrGrad)"/>
+  <path d="M64 78 L50 92 L58 92 L58 80 L70 80 L70 92 L78 92 Z" fill="url(#addrGrad)"/>
+  <!-- Small address marker -->
+  <circle cx="90" cy="30" r="10" fill="#f05032"/>
+  <text x="90" y="35" font-family="Arial" font-size="10" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">@</text>
+</svg>

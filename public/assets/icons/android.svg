@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <!-- Android Logo - Green robot -->
+  <defs>
+    <linearGradient id="androidGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3ddc84"/>
+      <stop offset="100%" style="stop-color:#2eb872"/>
+    </linearGradient>
+  </defs>
+  <!-- Circle background -->
+  <circle cx="64" cy="64" r="58" fill="#0d1117" stroke="url(#androidGrad)" stroke-width="2"/>
+  <!-- Android robot -->
+  <g fill="url(#androidGrad)">
+    <!-- Head -->
+    <path d="M64 32 C54 32 46 40 46 50 L46 56 C46 62 50 66 56 66 H68 C74 66 78 62 78 56 L78 50 C78 40 70 32 64 32 Z"/>
+    <!-- Antennas -->
+    <path d="M50 32 L44 22" stroke="url(#androidGrad)" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M78 32 L84 22" stroke="url(#androidGrad)" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="44" cy="20" r="3" fill="url(#androidGrad)"/>
+    <circle cx="84" cy="20" r="3" fill="url(#androidGrad)"/>
+    <!-- Eyes -->
+    <circle cx="54" cy="42" r="4" fill="#0d1117"/>
+    <circle cx="74" cy="42" r="4" fill="#0d1117"/>
+    <!-- Body -->
+    <path d="M46 66 L38 100 L90 100 L82 66 Z"/>
+    <!-- Arms -->
+    <path d="M46 70 L28 88" stroke="url(#androidGrad)" stroke-width="8" stroke-linecap="round" fill="none"/>
+    <path d="M82 70 L100 88" stroke="url(#androidGrad)" stroke-width="8" stroke-linecap="round" fill="none"/>
+    <!-- Legs -->
+    <path d="M54 100 L48 120" stroke="url(#androidGrad)" stroke-width="8" stroke-linecap="round" fill="none"/>
+    <path d="M74 100 L80 120" stroke="url(#androidGrad)" stroke-width="8" stroke-linecap="round" fill="none"/>
+  </g>
+</svg>

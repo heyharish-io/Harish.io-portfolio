@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <!-- Google Gemini AI Icon -->
+  <defs>
+    <linearGradient id="geminiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6"/>
+      <stop offset="50%" style="stop-color:#06b6d4"/>
+      <stop offset="100%" style="stop-color:#10b981"/>
+    </linearGradient>
+    <linearGradient id="geminiGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a855f7"/>
+      <stop offset="100%" style="stop-color:#0ea5e9"/>
+    </linearGradient>
+  </defs>
+  <!-- Rounded square background -->
+  <rect x="8" y="8" width="112" height="112" rx="16" fill="#0d1117" stroke="url(#geminiGrad)" stroke-width="2"/>
+  <!-- Gemini star/spark symbol -->
+  <g fill="url(#geminiGrad)">
+    <!-- Main star -->
+    <path d="M64 24 L70 48 L96 52 L74 70 L80 96 L64 80 L48 96 L54 70 L32 52 L58 48 Z" opacity="0.9"/>
+    <!-- Inner star -->
+    <path d="M64 38 L68 54 L80 58 L66 70 L70 86 L64 74 L58 86 L62 70 L46 58 L60 54 Z" fill="url(#geminiGlow)"/>
+    <!-- Center dot -->
+    <circle cx="64" cy="64" r="8" fill="white" opacity="0.9"/>
+  </g>
+  <!-- AI neural network nodes around -->
+  <g opacity="0.4">
+    <circle cx="24" cy="24" r="4" fill="#8b5cf6"/>
+    <circle cx="104" cy="24" r="4" fill="#06b6d4"/>
+    <circle cx="24" cy="104" r="4" fill="#10b981"/>
+    <circle cx="104" cy="104" r="4" fill="#f59e0b"/>
+  </g>
+  <!-- Connection lines -->
+  <g stroke="url(#geminiGrad)" stroke-width="1.5" opacity="0.3">
+    <line x1="64" y1="24" x2="24" y2="24"/>
+    <line x1="64" y1="24" x2="104" y2="24"/>
+    <line x1="64" y1="104" x2="24" y2="104"/>
+    <line x1="64" y1="104" x2="104" y2="104"/>
+  </g>
+</svg>

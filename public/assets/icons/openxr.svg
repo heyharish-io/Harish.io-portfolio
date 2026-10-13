@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <!-- OpenXR / XR Interaction Toolkit Icon -->
+  <defs>
+    <linearGradient id="xrGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0066cc"/>
+      <stop offset="100%" style="stop-color:#003399"/>
+    </linearGradient>
+    <linearGradient id="xrAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#1d4ed8"/>
+    </linearGradient>
+  </defs>
+  <!-- Rounded hexagon background -->
+  <path d="M64 8 C86 8 104 26 112 48 C120 70 104 88 82 100 L64 120 L46 100 C24 88 8 70 16 48 C8 26 26 8 48 8 Z" fill="url(#xrGrad)"/>
+  <!-- VR headset silhouette -->
+  <path d="M30 40 C30 34 36 28 42 28 H86 C92 28 98 34 98 40 V72 C98 78 92 84 86 84 H42 C36 84 30 78 30 72 V40 Z" fill="url(#xrAccent)" opacity="0.9"/>
+  <!-- Lenses -->
+  <circle cx="50" cy="56" r="12" fill="white" opacity="0.3"/>
+  <circle cx="78" cy="56" r="12" fill="white" opacity="0.3"/>
+  <circle cx="50" cy="56" r="6" fill="url(#xrAccent)"/>
+  <circle cx="78" cy="56" r="6" fill="url(#xrAccent)"/>
+  <!-- Controller interaction rays -->
+  <path d="M20 60 C35 50 50 50 64 60" fill="none" stroke="url(#xrAccent)" stroke-width="3" stroke-linecap="round" stroke-dasharray="4 2" opacity="0.6"/>
+  <path d="M108 60 C93 50 78 50 64 60" fill="none" stroke="url(#xrAccent)" stroke-width="3" stroke-linecap="round" stroke-dasharray="4 2" opacity="0.6"/>
+  <!-- Interaction dots -->
+  <circle cx="40" cy="40" r="3" fill="url(#xrAccent)" opacity="0.8"/>
+  <circle cx="88" cy="40" r="3" fill="url(#xrAccent)" opacity="0.8"/>
+</svg>

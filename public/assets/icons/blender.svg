@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <!-- Blender Logo - Orange/White theme -->
+  <defs>
+    <linearGradient id="blenderOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5792a"/>
+      <stop offset="100%" style="stop-color:#e0601a"/>
+    </linearGradient>
+    <linearGradient id="blenderWhite" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff"/>
+      <stop offset="100%" style="stop-color:#e8e8e8"/>
+    </linearGradient>
+  </defs>
+  <!-- Circle background -->
+  <circle cx="64" cy="64" r="56" fill="url(#blenderOrange)"/>
+  <!-- Blender symbol - eye/triangle composition -->
+  <g fill="url(#blenderWhite)">
+    <!-- Outer ring segments -->
+    <path d="M64 16 C47 16 32 31 32 48 C32 56 38 62 46 64 L46 80 C38 82 32 88 32 96 C32 113 47 128 64 128 C81 128 96 113 96 96 C96 88 90 82 82 80 L82 64 C90 62 96 56 96 48 C96 31 81 16 64 16 Z"/>
+    <!-- Inner cutout -->
+    <path d="M64 28 C48 28 35 41 35 58 C35 66 40 72 48 74 L48 86 C40 88 35 94 35 102 C35 119 48 132 64 132 C80 132 93 119 93 102 C93 94 88 88 80 86 L80 74 C88 72 93 66 93 58 C93 41 80 28 64 28 Z" fill="#0e1128"/>
+    <!-- Center diamond/eye -->
+    <path d="M64 44 L48 64 L64 84 L80 64 Z" fill="url(#blenderWhite)"/>
+    <path d="M64 52 L56 64 L64 76 L72 64 Z" fill="#0e1128"/>
+  </g>
+</svg>

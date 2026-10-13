@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <!-- Unreal Engine Logo - Official style -->
+  <defs>
+    <linearGradient id="ueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0e1128"/>
+      <stop offset="100%" style="stop-color:#1a1f3a"/>
+    </linearGradient>
+    <linearGradient id="ueBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00b4fc"/>
+      <stop offset="100%" style="stop-color:#0078d4"/>
+    </linearGradient>
+  </defs>
+  <!-- Rounded square background -->
+  <rect x="8" y="8" width="112" height="112" rx="16" fill="url(#ueGrad)" stroke="url(#ueBlue)" stroke-width="2"/>
+  <!-- UE Stylized "UE" letters -->
+  <path d="M36 84 L36 44 C36 36 42 32 50 32 C58 32 64 36 64 44 L64 84" fill="none" stroke="url(#ueBlue)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M78 44 C78 36 84 32 92 32 C100 32 106 36 106 44 L106 84" fill="none" stroke="url(#ueBlue)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M78 64 H98" stroke="url(#ueBlue)" stroke-width="6" stroke-linecap="round"/>
+  <!-- Subtle glow -->
+  <circle cx="64" cy="64" r="50" fill="url(#ueBlue)" opacity="0.05"/>
+</svg>

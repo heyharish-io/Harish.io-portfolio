@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <!-- Vuforia Logo - Blue gradient with target/marker aesthetic -->
+  <defs>
+    <linearGradient id="vuforiaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0066cc"/>
+      <stop offset="100%" style="stop-color:#003399"/>
+    </linearGradient>
+    <linearGradient id="vuforiaGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#1d4ed8"/>
+    </linearGradient>
+  </defs>
+  <!-- Rounded hexagon background -->
+  <path d="M64 8 C86 8 104 26 112 48 C120 70 104 88 82 100 L64 120 L46 100 C24 88 8 70 16 48 C8 26 26 8 48 8 Z" fill="url(#vuforiaGrad)"/>
+  <!-- Concentric target rings (Image Target representation) -->
+  <circle cx="64" cy="64" r="38" fill="none" stroke="white" stroke-width="3" opacity="0.3"/>
+  <circle cx="64" cy="64" r="28" fill="none" stroke="white" stroke-width="2.5" opacity="0.5"/>
+  <circle cx="64" cy="64" r="18" fill="none" stroke="white" stroke-width="2" opacity="0.7"/>
+  <!-- Center crosshair -->
+  <circle cx="64" cy="64" r="8" fill="url(#vuforiaGlow)"/>
+  <path d="M64 50 V78 M50 64 H78" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <!-- Corner markers (QR/AR marker style) -->
+  <rect x="26" y="26" width="8" height="8" rx="1" fill="white" opacity="0.4"/>
+  <rect x="94" y="26" width="8" height="8" rx="1" fill="white" opacity="0.4"/>
+  <rect x="26" y="94" width="8" height="8" rx="1" fill="white" opacity="0.4"/>
+  <rect x="94" y="94" width="8" height="8" rx="1" fill="white" opacity="0.4"/>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <!-- Visual Studio Code Icon -->
+  <defs>
+    <linearGradient id="vscodeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#007acc"/>
+      <stop offset="100%" style="stop-color:#005a9e"/>
+    </linearGradient>
+    <linearGradient id="vscodeAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4ec9b0"/>
+      <stop offset="100%" style="stop-color:#2ec4b6"/>
+    </linearGradient>
+  </defs>
+  <!-- Rounded square background -->
+  <rect x="8" y="8" width="112" height="112" rx="16" fill="#1e1e1e" stroke="url(#vscodeGrad)" stroke-width="2"/>
+  <!-- VS Code brackets -->
+  <path d="M38 30 V98" fill="none" stroke="url(#vscodeGrad)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M90 30 V98" fill="none" stroke="url(#vscodeAccent)" stroke-width="6" stroke-linecap="round"/>
+  <!-- Curly braces -->
+  <path d="M38 30 C50 30 56 40 56 54 C56 68 50 78 38 78" fill="none" stroke="url(#vscodeGrad)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M38 98 C50 98 56 88 56 74 C56 60 50 50 38 50" fill="none" stroke="url(#vscodeGrad)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M90 30 C78 30 72 40 72 54 C72 68 78 78 90 78" fill="none" stroke="url(#vscodeAccent)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M90 98 C78 98 72 88 72 74 C72 60 78 50 90 50" fill="none" stroke="url(#vscodeAccent)" stroke-width="4" stroke-linecap="round"/>
+  <!-- Code lines inside -->
+  <g stroke="url(#vscodeAccent)" stroke-width="2" stroke-linecap="round" opacity="0.6">
+    <line x1="56" y1="48" x2="80" y2="48"/>
+    <line x1="56" y1="64" x2="75" y2="64"/>
+    <line x1="56" y1="80" x2="80" y2="80"/>
+  </g>
+</svg>

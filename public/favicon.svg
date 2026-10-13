@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <!-- Harish XR Developer Favicon - VR Headset in brand blue -->
+  <defs>
+    <linearGradient id="favGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="favGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#60a5fa"/>
+      <stop offset="100%" style="stop-color:#3b82f6"/>
+    </linearGradient>
+  </defs>
+  <!-- Rounded square background -->
+  <rect width="48" height="48" rx="10" fill="#0a0b10" stroke="url(#favGrad)" stroke-width="1.5"/>
+  <!-- VR Headset silhouette -->
+  <path d="M10 18 C10 14 14 10 18 10 H30 C34 10 38 14 38 18 V30 C38 34 34 38 30 38 H18 C14 38 10 34 10 30 V18 Z" fill="url(#favGrad)" stroke="url(#favGlow)" stroke-width="1"/>
+  <!-- Headset strap -->
+  <path d="M8 18 C6 18 4 20 4 24 V28 C4 32 6 34 8 34 H10 M38 34 H40 C42 34 44 32 44 28 V24 C44 20 42 18 40 18 H38" fill="none" stroke="url(#favGlow)" stroke-width="2" stroke-linecap="round"/>
+  <!-- Lenses glow -->
+  <circle cx="21" cy="24" r="5" fill="url(#favGlow)" opacity="0.9"/>
+  <circle cx="31" cy="24" r="5" fill="url(#favGlow)" opacity="0.9"/>
+  <!-- Lens rings -->
+  <circle cx="21" cy="24" r="7" fill="none" stroke="url(#favGrad)" stroke-width="1" opacity="0.6"/>
+  <circle cx="31" cy="24" r="7" fill="none" stroke="url(#favGrad)" stroke-width="1" opacity="0.6"/>
+  <!-- Center bridge -->
+  <rect x="23" y="22" width="6" height="4" rx="1" fill="url(#favGrad)" opacity="0.8"/>
+  <!-- Tracking dots (subtle) -->
+  <circle cx="16" cy="14" r="1.5" fill="#60a5fa" opacity="0.7"/>
+  <circle cx="36" cy="14" r="1.5" fill="#60a5fa" opacity="0.7"/>
+  <circle cx="16" cy="34" r="1.5" fill="#60a5fa" opacity="0.5"/>
+  <circle cx="36" cy="34" r="1.5" fill="#60a5fa" opacity="0.5"/>
+</svg>
