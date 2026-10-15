@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:vercel": "vercel dev",
+    "test:contact": "node scripts/test-contact.js",
     "build": "vite build",
     "lint": "oxlint",
     "preview": "vite preview"

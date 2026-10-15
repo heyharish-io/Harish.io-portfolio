@@ -171,52 +171,180 @@ export default async function handler(req, res) {
     trimmedMessage,
   ].join('\n');
 
-  const htmlContent = `
+ const htmlContent = `
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>New Portfolio Message</title>
 </head>
-<body style="margin: 0; padding: 24px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #0b0f19; color: #f1f5f9;">
-  <div style="max-width: 600px; margin: 0 auto; background-color: #111827; border: 1px solid #1f2937; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);">
-    <div style="background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%); padding: 20px 24px; border-bottom: 1px solid #1f2937;">
-      <h2 style="margin: 0; color: #ffffff; font-size: 18px; font-weight: 700; letter-spacing: 0.5px;">Portfolio Contact Inquiry</h2>
-      <p style="margin: 4px 0 0 0; color: #93c5fd; font-size: 12px; font-family: monospace;">RECEIVED VIA VERCEL SERVERLESS // DIRECT</p>
-    </div>
-    <div style="padding: 24px;">
-      <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
-        <tr>
-          <td style="padding: 8px 0; color: #94a3b8; font-size: 13px; font-weight: 600; width: 100px;">SENDER:</td>
-          <td style="padding: 8px 0; color: #f8fafc; font-size: 14px; font-weight: 500;">${escapedName}</td>
-        </tr>
-        <tr>
-          <td style="padding: 8px 0; color: #94a3b8; font-size: 13px; font-weight: 600;">EMAIL:</td>
-          <td style="padding: 8px 0; color: #38bdf8; font-size: 14px;"><a href="mailto:${escapedEmail}" style="color: #38bdf8; text-decoration: none;">${escapedEmail}</a></td>
-        </tr>
-        <tr>
-          <td style="padding: 8px 0; color: #94a3b8; font-size: 13px; font-weight: 600;">SUBJECT:</td>
-          <td style="padding: 8px 0; color: #f8fafc; font-size: 14px; font-weight: 500;">${escapedSubject}</td>
-        </tr>
-        <tr>
-          <td style="padding: 8px 0; color: #94a3b8; font-size: 13px; font-weight: 600;">RECEIVED:</td>
-          <td style="padding: 8px 0; color: #94a3b8; font-size: 12px; font-family: monospace;">${timestamp}</td>
-        </tr>
-      </table>
 
-      <div style="background-color: #0b0f19; border: 1px solid #1f2937; border-radius: 8px; padding: 16px; margin-top: 12px;">
-        <div style="color: #64748b; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; font-family: monospace;">MESSAGE BODY:</div>
-        <div style="color: #e2e8f0; font-size: 14px; line-height: 1.6; word-break: break-word;">${escapedMessage}</div>
-      </div>
-    </div>
-    <div style="background-color: #0b0f19; padding: 14px 24px; border-top: 1px solid #1f2937; text-align: center; color: #64748b; font-size: 11px;">
-      Direct reply to this email will respond to: <strong style="color: #94a3b8;">${escapedEmail}</strong>
-    </div>
+<body style="margin:0; padding:0; background-color:#080d18; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif; color:#e5e7eb;">
+
+  <div style="display:none; max-height:0; overflow:hidden; opacity:0;">
+    New contact message received through your portfolio.
   </div>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+    style="width:100%; background-color:#080d18; padding:32px 12px;">
+    <tr>
+      <td align="center">
+
+        <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0"
+          style="width:100%; max-width:600px; background-color:#101827; border:1px solid #263247; border-radius:16px; overflow:hidden;">
+
+          <!-- Header -->
+          <tr>
+            <td style="padding:30px 32px; background-color:#111f38; background-image:linear-gradient(135deg,#172c50 0%,#111827 75%); border-bottom:1px solid #263247;">
+
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td>
+                    <div style="font-size:11px; font-weight:700; letter-spacing:2px; color:#7dd3fc; text-transform:uppercase; margin-bottom:12px;">
+                      PORTFOLIO NOTIFICATION
+                    </div>
+
+                    <h1 style="margin:0; font-size:25px; line-height:1.35; font-weight:700; color:#ffffff;">
+                      You've got a new message.
+                    </h1>
+
+                    <p style="margin:10px 0 0; font-size:14px; line-height:1.7; color:#b8c5d9;">
+                      Someone reached out through your portfolio website.
+                    </p>
+                  </td>
+
+                  <td align="right" valign="top" width="54">
+                    <div style="width:46px; height:46px; line-height:46px; text-align:center; border-radius:14px; background-color:#1e3a5f; border:1px solid #365b86; color:#7dd3fc; font-size:23px; font-weight:700;">
+                      ✉
+                    </div>
+                  </td>
+                </tr>
+              </table>
+
+            </td>
+          </tr>
+
+          <!-- Email Body -->
+          <tr>
+            <td style="padding:30px 32px;">
+
+              <!-- Sender Section -->
+              <div style="font-size:11px; font-weight:700; letter-spacing:1.8px; color:#8494aa; text-transform:uppercase; margin-bottom:16px;">
+                SENDER DETAILS
+              </div>
+
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+                style="width:100%; background-color:#141f30; border:1px solid #29364a; border-radius:12px; margin-bottom:28px;">
+                <tr>
+                  <td style="padding:20px;">
+
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td width="48" valign="top">
+                          <div style="width:42px; height:42px; line-height:42px; text-align:center; border-radius:50%; background-color:#203b60; color:#93c5fd; font-size:18px; font-weight:700;">
+                            ${escapedName.charAt(0).toUpperCase()}
+                          </div>
+                        </td>
+
+                        <td style="padding-left:12px;" valign="middle">
+                          <div style="font-size:17px; font-weight:700; line-height:1.5; color:#f8fafc;">
+                            ${escapedName}
+                          </div>
+
+                          <div style="font-size:13px; line-height:1.7; color:#8fa2bb; word-break:break-word;">
+                            ${escapedEmail}
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+
+                    <div style="height:1px; background-color:#29364a; margin:18px 0;"></div>
+
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td width="100" valign="top" style="padding:7px 0; font-size:12px; font-weight:600; color:#8494aa;">
+                          SUBJECT
+                        </td>
+                        <td valign="top" style="padding:7px 0; font-size:14px; line-height:1.6; font-weight:600; color:#eaf2ff; word-break:break-word;">
+                          ${escapedSubject}
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td valign="top" style="padding:7px 0; font-size:12px; font-weight:600; color:#8494aa;">
+                          RECEIVED
+                        </td>
+                        <td valign="top" style="padding:7px 0; font-size:13px; line-height:1.6; color:#aab8ca;">
+                          ${timestamp}
+                        </td>
+                      </tr>
+                    </table>
+
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Message Section -->
+              <div style="font-size:11px; font-weight:700; letter-spacing:1.8px; color:#8494aa; text-transform:uppercase; margin-bottom:14px;">
+                MESSAGE CONTENT
+              </div>
+
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+                style="width:100%; background-color:#0b1220; border:1px solid #29364a; border-left:3px solid #38bdf8; border-radius:8px;">
+                <tr>
+                  <td style="padding:22px 20px;">
+                    <div style="font-size:14px; line-height:1.9; color:#dbe5f2; white-space:pre-wrap; word-break:break-word;">${escapedMessage}</div>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Reply Section -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+                style="margin-top:24px; background-color:#102b32; border:1px solid #1d4a50; border-radius:10px;">
+                <tr>
+                  <td style="padding:16px 18px;">
+                    <div style="font-size:13px; line-height:1.8; color:#b8dadd;">
+                      <strong style="color:#67e8f9;">Ready to reply?</strong><br>
+                      Reply directly to this email to respond to the sender.
+                    </div>
+                  </td>
+                </tr>
+              </table>
+
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="padding:22px 32px; background-color:#0b1220; border-top:1px solid #263247;">
+
+              <div style="font-size:13px; font-weight:700; color:#cbd5e1; margin-bottom:6px;">
+                Portfolio Contact System
+              </div>
+
+              <div style="font-size:12px; line-height:1.8; color:#77869c;">
+                This notification was generated automatically when someone submitted your portfolio contact form.
+              </div>
+
+              <div style="height:1px; background-color:#263247; margin:18px 0;"></div>
+
+              <div style="font-size:11px; line-height:1.7; color:#64748b;">
+                © ${new Date().getFullYear()} · Portfolio Contact Notification
+              </div>
+
+            </td>
+          </tr>
+
+        </table>
+
+      </td>
+    </tr>
+  </table>
+
 </body>
 </html>
-  `.trim();
+`.trim();
 
   // 8. Deliver Email via Gmail SMTP
   try {
