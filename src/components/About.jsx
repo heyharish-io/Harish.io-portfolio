@@ -10,7 +10,7 @@ const About = () => {
 
         {/* Section Title */}
         <SectionTitle
-          tag="BIOGRAPHY"
+
           code="ABOUT"
           title="About"
           highlight="Me"
@@ -28,7 +28,7 @@ const About = () => {
 
                 {/* Professional Placeholder Frame */}
                 <div className="relative rounded-[14px] overflow-hidden bg-surface-950 aspect-square group flex items-center justify-center">
-                  
+
                   {/* HKP Initials Placeholder */}
                   <div className="flex flex-col items-center justify-center text-center px-6">
                     <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-blue-500/30 to-blue-700/30 border border-blue-500/30 flex items-center justify-center mb-4">

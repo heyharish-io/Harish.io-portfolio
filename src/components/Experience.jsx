@@ -7,10 +7,10 @@ const Experience = () => {
   return (
     <section id="experience" className="relative py-24 sm:py-32 overflow-hidden bg-surface-900 border-t border-surface-700/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Section Title */}
         <SectionTitle
-          tag="CAREER TIMELINE"
+
           code="EXPERIENCE"
           title="Professional"
           highlight="Experience"
