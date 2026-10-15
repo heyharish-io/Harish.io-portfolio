@@ -1,7 +1,6 @@
 import React from 'react';
 import SectionTitle from './SectionTitle';
 import { personalInfo } from '../data/profile';
-import { Cpu, Radio } from 'lucide-react';
 
 const About = () => {
   return (
@@ -26,24 +25,32 @@ const About = () => {
               {/* Outer Clean Card Frame */}
               <div className="relative rounded-2xl p-1 bg-surface-800 border border-slate-700/80 shadow-xl">
 
-                {/* Professional Placeholder Frame */}
+                {/* Image Frame */}
                 <div className="relative rounded-[14px] overflow-hidden bg-surface-950 aspect-square group flex items-center justify-center">
-
-                  {/* HKP Initials Placeholder */}
-                  <div className="flex flex-col items-center justify-center text-center px-6">
-                    <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-blue-500/30 to-blue-700/30 border border-blue-500/30 flex items-center justify-center mb-4">
-                      <span className="font-display text-3xl font-bold text-blue-400 tracking-wider">HKP</span>
+                  {personalInfo.aboutImage || personalInfo.profileImage ? (
+                    <img
+                      src={personalInfo.aboutImage || personalInfo.profileImage}
+                      alt="XR Development - Spatial Computing"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                  ) : (
+                    /* HKP Initials Placeholder */
+                    <div className="flex flex-col items-center justify-center text-center px-6">
+                      <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-blue-500/30 to-blue-700/30 border border-blue-500/30 flex items-center justify-center mb-4">
+                        <span className="font-display text-3xl font-bold text-blue-400 tracking-wider">HKP</span>
+                      </div>
+                      <p className="font-sans text-sm text-slate-400 font-medium">
+                        XR Developer
+                      </p>
+                      <p className="font-mono text-xs text-slate-500 mt-1">
+                        Unity • Vuforia • Quest
+                      </p>
                     </div>
-                    <p className="font-sans text-sm text-slate-400 font-medium">
-                      XR Developer
-                    </p>
-                    <p className="font-mono text-xs text-slate-500 mt-1">
-                      Unity • Vuforia • Quest
-                    </p>
-                  </div>
+                  )}
 
-                  {/* Gradient shadow */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-surface-950/85 via-transparent to-transparent opacity-80" />
+                  {/* Gradient shadow for text & diagnostic readout contrast */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-surface-950/90 via-surface-950/20 to-transparent pointer-events-none" />
 
                   {/* Diagnostic Readout Bar at bottom */}
                   <div className="absolute bottom-4 inset-x-4 p-3 rounded-xl bg-surface-900/90 border border-slate-800 backdrop-blur-md">

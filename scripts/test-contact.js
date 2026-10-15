@@ -42,7 +42,7 @@ const transporter = nodemailer.createTransport({
 });
 
 console.log('1. Verifying Gmail SMTP connection...');
-transporter.verify((err, success) => {
+transporter.verify((err, _success) => {
   if (err) {
     console.error('❌ SMTP Connection failed:', err.message);
     process.exit(1);

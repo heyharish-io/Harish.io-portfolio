@@ -106,24 +106,32 @@ const Hero = () => {
               {/* Main Professional Container */}
               <div className="relative w-[88%] h-[88%] rounded-2xl p-2 bg-surface-800 border border-surface-700 shadow-2xl group">
 
-                {/* Inner Placeholder Frame */}
+                {/* Inner Image Frame */}
                 <div className="relative w-full h-full rounded-[14px] overflow-hidden bg-surface-950 flex items-center justify-center">
-
-                  {/* HKP Initials Placeholder */}
-                  <div className="flex flex-col items-center justify-center text-center px-6">
-                    <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-blue-500/30 to-blue-700/30 border border-blue-500/30 flex items-center justify-center mb-4">
-                      <span className="font-display text-3xl sm:text-4xl font-bold text-blue-400 tracking-wider">HKP</span>
+                  {personalInfo.profileImage ? (
+                    <img
+                      src={personalInfo.profileImage}
+                      alt={personalInfo.fullName || "Harish Kumar P - XR Developer"}
+                      className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                      loading="eager"
+                    />
+                  ) : (
+                    /* HKP Initials Placeholder */
+                    <div className="flex flex-col items-center justify-center text-center px-6">
+                      <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-blue-500/30 to-blue-700/30 border border-blue-500/30 flex items-center justify-center mb-4">
+                        <span className="font-display text-3xl sm:text-4xl font-bold text-blue-400 tracking-wider">HKP</span>
+                      </div>
+                      <p className="font-sans text-sm sm:text-base text-slate-400 font-medium">
+                        XR Developer
+                      </p>
+                      <p className="font-mono text-xs text-slate-500 mt-1">
+                        Unity • Vuforia • Quest
+                      </p>
                     </div>
-                    <p className="font-sans text-sm sm:text-base text-slate-400 font-medium">
-                      XR Developer
-                    </p>
-                    <p className="font-mono text-xs text-slate-500 mt-1">
-                      Unity • Vuforia • Quest
-                    </p>
-                  </div>
+                  )}
 
                   {/* Gradient shadow for text contrast */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-surface-950/80 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-surface-950/60 via-transparent to-transparent pointer-events-none" />
                 </div>
               </div>
 

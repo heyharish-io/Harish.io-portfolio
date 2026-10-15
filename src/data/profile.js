@@ -1,5 +1,4 @@
 // Images served from public/assets via Vite
-// Profile images removed - using professional placeholder with HKP initials instead
 
 export const personalInfo = {
   name: "Harish Kumar P",
@@ -7,8 +6,8 @@ export const personalInfo = {
   role: "XR DEVELOPER",
   headline: "Building Immersive Worlds Through XR.",
   shortDescription: "I'm Harish Kumar P, an XR Developer creating interactive augmented and virtual reality experiences using Unity, C#, Vuforia, and XR Interaction Toolkit. Currently an AR Unity Developer Intern at VRTAM Studios.",
-  profileImage: null,
-  aboutImage: null,
+  profileImage: "/assets/profile/harish-profile.jpeg",
+  aboutImage: "/assets/profile/harish-profile.jpeg",
   location: "Bengaluru, India // Remote Available",
   email: "heyharish.io@gmail.com",
   availability: "Available for XR Projects & Roles",
