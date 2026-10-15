@@ -9,28 +9,28 @@ const Hero = () => {
   };
 
   return (
-    <section 
-      id="hero" 
+    <section
+      id="hero"
       className="relative min-h-screen flex items-center justify-center pt-28 pb-16 lg:py-0 overflow-hidden bg-surface-900"
     >
       {/* XR Pattern Background */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
-        <img 
-          src="/assets/backgrounds/hero-xr-pattern.svg" 
-          alt="" 
+        <img
+          src="/assets/backgrounds/hero-xr-pattern.svg"
+          alt=""
           className="w-full h-full object-cover opacity-40"
           aria-hidden="true"
         />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10 pt-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 items-center">
-          
+
           {/* LEFT SIDE CONTENT (7 cols on lg) */}
           <div className="lg:col-span-7 flex flex-col justify-center text-left">
-            
+
             {/* Status Pill Badge */}
-            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-surface-800 border border-surface-700 text-slate-200 text-xs font-mono mb-6 w-fit shadow-xs">
+            {/* <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-surface-800 border border-surface-700 text-slate-200 text-xs font-mono mb-6 w-fit shadow-xs">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
@@ -40,7 +40,7 @@ const Hero = () => {
               </span>
               <span className="text-slate-600">//</span>
               <span className="text-blue-400 font-medium">Available for Projects</span>
-            </div>
+            </div> */}
 
             {/* Main Headline - Exact from brief */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-display tracking-tight text-white leading-[1.08] mb-6">
@@ -99,16 +99,16 @@ const Hero = () => {
           {/* RIGHT SIDE: Professional Placeholder with HKP Initials */}
           <div className="lg:col-span-5 flex justify-center items-center relative">
             <div className="relative w-full max-w-[340px] sm:max-w-[380px] aspect-square flex items-center justify-center">
-              
+
               {/* Soft Ambient Radial Glow Behind Placeholder */}
               <div className="absolute inset-4 rounded-3xl bg-blue-900/15 blur-xl pointer-events-none" />
 
               {/* Main Professional Container */}
               <div className="relative w-[88%] h-[88%] rounded-2xl p-2 bg-surface-800 border border-surface-700 shadow-2xl group">
-                
+
                 {/* Inner Placeholder Frame */}
                 <div className="relative w-full h-full rounded-[14px] overflow-hidden bg-surface-950 flex items-center justify-center">
-                  
+
                   {/* HKP Initials Placeholder */}
                   <div className="flex flex-col items-center justify-center text-center px-6">
                     <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-blue-500/30 to-blue-700/30 border border-blue-500/30 flex items-center justify-center mb-4">
@@ -152,15 +152,15 @@ const Hero = () => {
       </div>
 
       {/* Subtle Scroll Down Prompt */}
-      <div 
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-1.5 cursor-pointer opacity-70 hover:opacity-100 transition-opacity" 
+      {/* <div
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-1.5 cursor-pointer opacity-70 hover:opacity-100 transition-opacity"
         onClick={() => scrollTo('about')}
       >
         <span className="font-mono text-[11px] tracking-wider text-slate-400 uppercase">Scroll to Explore</span>
         <div className="w-4 h-7 rounded-full border border-surface-700 flex items-start justify-center p-1">
           <div className="w-1 h-1.5 rounded-full bg-blue-400"></div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

@@ -46,22 +46,22 @@ const fallbackIcons = {
   'Fork (Git Client)': 'GitBranch',
 };
 
-import { 
-  Glasses, 
-  Headset, 
-  Cpu, 
-  Box, 
-  MousePointerClick, 
-  Layers, 
-  Code, 
-  Move3D, 
-  Atom, 
-  FileCode, 
-  Globe, 
-  Palette, 
-  Hash, 
-  GitBranch, 
-  PenTool, 
+import {
+  Glasses,
+  Headset,
+  Cpu,
+  Box,
+  MousePointerClick,
+  Layers,
+  Code,
+  Move3D,
+  Atom,
+  FileCode,
+  Globe,
+  Palette,
+  Hash,
+  GitBranch,
+  PenTool,
   Terminal,
   Bot,
   Smartphone,
@@ -109,10 +109,10 @@ const Skills = () => {
   return (
     <section id="skills" className="relative py-24 sm:py-32 overflow-hidden bg-surface-900 border-t border-surface-700/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Section Title */}
         <SectionTitle
-          tag="STACK ARCHITECTURE"
+
           code="SKILLS"
           title="Skills &"
           highlight="Technologies"
@@ -127,11 +127,10 @@ const Skills = () => {
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`relative px-4 py-2 rounded-lg font-medium text-xs sm:text-sm tracking-wide transition-all duration-150 cursor-pointer ${
-                  isSelected
+                className={`relative px-4 py-2 rounded-lg font-medium text-xs sm:text-sm tracking-wide transition-all duration-150 cursor-pointer ${isSelected
                     ? 'bg-white text-slate-950 font-semibold shadow-xs'
                     : 'bg-surface-800 text-slate-300 border border-surface-700 hover:border-surface-600 hover:text-white hover:bg-surface-750'
-                }`}
+                  }`}
               >
                 <span>{category.name}</span>
               </button>

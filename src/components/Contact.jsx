@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import SectionTitle from './SectionTitle';
 import { personalInfo } from '../data/profile';
-import { Mail, MapPin, Send, CheckCircle2, Sparkles, Terminal, Copy, Check } from 'lucide-react';
+import { Mail, MapPin, Send, CheckCircle2, Copy, Check, AlertCircle } from 'lucide-react';
 
 // Gmail compose URL with prefilled recipient
 const GMAIL_COMPOSE_URL = 'https://mail.google.com/mail/?view=cm&fs=1&to=heyharish.io%40gmail.com';
@@ -10,20 +10,13 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    projectType: 'AR Experience',
+    subject: '',
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
   const [copied, setCopied] = useState(false);
-
-  const projectTypes = [
-    "AR Experience",
-    "VR Simulation",
-    "Interactive 3D Web",
-    "Spatial UI / UX",
-    "Technical Consultation"
-  ];
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(personalInfo.email);
@@ -31,30 +24,53 @@ const Contact = () => {
     setTimeout(() => setCopied(false), 2500);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setErrorMessage('');
 
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSuccess(true);
-      setFormData({
-        name: '',
-        email: '',
-        projectType: 'AR Experience',
-        message: ''
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        }),
       });
-      setTimeout(() => setIsSuccess(false), 6000);
-    }, 1200);
+
+      const data = await response.json().catch(() => ({}));
+
+      if (response.ok && data.success) {
+        setIsSuccess(true);
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: '',
+        });
+        setTimeout(() => setIsSuccess(false), 6000);
+      } else {
+        setErrorMessage(data.message || 'Failed to send message. Please try again.');
+      }
+    } catch {
+      setErrorMessage('Network error. Please check your connection and try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <section id="contact" className="relative py-24 sm:py-32 overflow-hidden bg-surface-850 border-t border-surface-700/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Section Title */}
         <SectionTitle
-          tag="COMMUNICATION"
+
           code="CONTACT"
           title="Get In"
           highlight="Touch"
@@ -62,16 +78,16 @@ const Contact = () => {
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start max-w-5xl mx-auto">
-          
+
           {/* Left Column: Direct Info & Details */}
           <div className="lg:col-span-5 space-y-5">
-            
+
             {/* Contact Details Card */}
             <div className="p-6 sm:p-7 rounded-2xl bg-surface-800 border border-surface-700 shadow-card">
-              <div className="flex items-center gap-2 font-mono text-xs text-blue-400 mb-4 font-medium">
+              {/* <div className="flex items-center gap-2 font-mono text-xs text-blue-400 mb-4 font-medium">
                 <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
                 <span>COMMS CHANNEL // ACTIVE</span>
-              </div>
+              </div> */}
 
               <h3 className="font-display text-2xl font-bold text-white mb-2">
                 Let's Build Something Immersive
@@ -89,9 +105,9 @@ const Contact = () => {
                     </div>
                     <div>
                       <div className="font-mono text-[10px] text-slate-400 uppercase">DIRECT EMAIL</div>
-                      <a 
-                        href={GMAIL_COMPOSE_URL} 
-                        target="_blank" 
+                      <a
+                        href={GMAIL_COMPOSE_URL}
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="font-mono text-xs sm:text-sm text-white hover:text-blue-400 transition-colors font-medium"
                       >
@@ -131,7 +147,7 @@ const Contact = () => {
             </div>
 
             {/* Quick Status Terminal Card */}
-            <div className="p-4 rounded-xl bg-surface-900 border border-surface-700 font-mono text-xs text-slate-400 space-y-1">
+            {/* <div className="p-4 rounded-xl bg-surface-900 border border-surface-700 font-mono text-xs text-slate-400 space-y-1">
               <div className="text-white font-medium flex items-center gap-1.5">
                 <Terminal className="w-3.5 h-3.5 text-blue-400" />
                 <span>ENVIRONMENT STATUS</span>
@@ -142,21 +158,21 @@ const Contact = () => {
               <div className="text-[11px] text-slate-300">
                 Spatial Engine: <span className="text-blue-400 font-medium">Unity 6 / XR Interaction Toolkit</span>
               </div>
-            </div>
+            </div> */}
 
           </div>
 
           {/* Right Column: Contact Form */}
           <div className="lg:col-span-7">
             <div className="p-6 sm:p-8 rounded-2xl bg-surface-800 border border-surface-700 shadow-card">
-              
-              <div className="flex items-center justify-between pb-4 mb-6 border-b border-surface-700/60 font-mono text-xs text-slate-400">
+
+              {/* <div className="flex items-center justify-between pb-4 mb-6 border-b border-surface-700/60 font-mono text-xs text-slate-400">
                 <span className="flex items-center gap-2 text-white font-semibold">
                   <Sparkles className="w-4 h-4 text-blue-400" />
                   SEND A MESSAGE
                 </span>
                 <span className="text-slate-400">ENCRYPTED // DIRECT</span>
-              </div>
+              </div> */}
 
               {isSuccess ? (
                 <div className="py-12 text-center space-y-4 animate-fade-in">
@@ -172,7 +188,7 @@ const Contact = () => {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
-                  
+
                   {/* Name & Email Row */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
@@ -204,38 +220,43 @@ const Contact = () => {
                     </div>
                   </div>
 
-                  {/* Project Type Selector */}
+                  {/* Subject Input */}
                   <div>
                     <label className="block font-mono text-xs text-slate-300 uppercase mb-2 font-medium">
-                      Experience Archetype
+                      Subject <span className="text-blue-400">*</span>
                     </label>
-                    <select
-                      value={formData.projectType}
-                      onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl bg-surface-900 border border-surface-700 text-white font-sans text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500/20 transition-all shadow-xs"
-                    >
-                      {projectTypes.map((type) => (
-                        <option key={type} value={type} className="bg-surface-900 text-white">
-                          {type}
-                        </option>
-                      ))}
-                    </select>
+                    <input
+                      type="text"
+                      required
+                      value={formData.subject}
+                      onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                      placeholder="e.g. Project Inquiry / Collaboration"
+                      className="w-full px-4 py-3 rounded-xl bg-surface-900 border border-surface-700 text-white placeholder-slate-500 font-sans text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500/20 transition-all shadow-xs"
+                    />
                   </div>
 
                   {/* Message Field */}
                   <div>
                     <label className="block font-mono text-xs text-slate-300 uppercase mb-2 font-medium">
-                      Project Specification / Message <span className="text-blue-400">*</span>
+                      Message <span className="text-blue-400">*</span>
                     </label>
                     <textarea
                       required
                       rows={4}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      placeholder="Describe your vision, target hardware (WebAR, Quest 3, Vision Pro), or desired timeline..."
+                      placeholder="Describe your vision..."
                       className="w-full px-4 py-3 rounded-xl bg-surface-900 border border-surface-700 text-white placeholder-slate-500 font-sans text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500/20 transition-all resize-none shadow-xs"
                     ></textarea>
                   </div>
+
+                  {/* Error Message */}
+                  {errorMessage && (
+                    <div className="p-3.5 rounded-xl bg-red-500/10 border border-red-500/30 text-red-400 font-sans text-xs flex items-center gap-2">
+                      <AlertCircle className="w-4 h-4 shrink-0 text-red-400" />
+                      <span>{errorMessage}</span>
+                    </div>
+                  )}
 
                   {/* Submit Button */}
                   <button

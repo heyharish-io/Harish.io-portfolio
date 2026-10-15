@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import SectionTitle from './SectionTitle';
 import { projects, projectCategories } from '../data/projects';
-import { 
-  ExternalLink, 
-  Eye, 
-  Maximize2, 
-  X, 
+import {
+  ExternalLink,
+  Eye,
+  Maximize2,
+  X,
   CheckCircle2,
   Code2,
   PlayCircle
@@ -35,10 +35,10 @@ const Projects = () => {
   return (
     <section id="projects" className="relative py-24 sm:py-32 overflow-hidden bg-surface-850 border-t border-surface-700/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Section Title */}
         <SectionTitle
-          tag="PORTFOLIO WORK"
+
           code="PROJECTS"
           title="Featured"
           highlight="Projects"
@@ -53,11 +53,10 @@ const Projects = () => {
               <button
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id)}
-                className={`relative px-4 py-2 rounded-lg font-medium text-xs sm:text-sm tracking-wide transition-all duration-150 cursor-pointer ${
-                  isSelected
+                className={`relative px-4 py-2 rounded-lg font-medium text-xs sm:text-sm tracking-wide transition-all duration-150 cursor-pointer ${isSelected
                     ? 'bg-white text-slate-950 font-semibold shadow-xs'
                     : 'bg-surface-800 text-slate-300 border border-surface-700 hover:border-surface-600 hover:text-white hover:bg-surface-750'
-                }`}
+                  }`}
               >
                 <span>{cat.name}</span>
               </button>
@@ -70,7 +69,7 @@ const Projects = () => {
           {filteredProjects.map((project) => {
             const hasVideo = project.videoUrl && project.videoUrl.trim() !== '';
             const isCompanyProject = project.id === 'ar-story-experiences';
-            
+
             return (
               <div
                 key={project.id}
@@ -205,7 +204,7 @@ const Projects = () => {
         {selectedProject && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-fade-in">
             <div className="relative w-full max-w-2xl rounded-2xl bg-surface-850 border border-surface-700 p-6 sm:p-8 shadow-2xl max-h-[90vh] overflow-y-auto">
-              
+
               {/* Close Button */}
               <button
                 onClick={() => setSelectedProject(null)}
